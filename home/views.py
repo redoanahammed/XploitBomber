@@ -16,6 +16,7 @@ def doattack(request):
 
     mobile_no = request.POST.get("mn")
     frequency_no = request.POST.get("fq")
+    country_code = request.POST.get("cc")
 
     try:
         if mobile_no == "" or int(frequency_no) < 0 or len(mobile_no) != 10 or frequency_no == "" or (frequency_no.isdigit() == False) or (mobile_no.isdigit() == False):
@@ -28,8 +29,8 @@ def doattack(request):
     Producti = Attackinfo( mobile_n = mobile_no, frequency_n=frequency_no)
     Producti.save()
 
-    if int(frequency_no) >= 5000 :
-        frequency_no = "5000"
+    if int(frequency_no) >= 1000 :
+        frequency_no = "1000"
 
     #FOR WINDOWS
     # os.system(f"python bomber.py --num {frequency_no} {mobile_no}")
@@ -38,6 +39,6 @@ def doattack(request):
     # os.system(f"nohup /home/ubuntu/env/bin/python3 bomber.py --num {frequency_no} {mobile_no}  &")
 
     #FOR HEROKU
-    os.system(f"nohup /usr/bin/python3 bomber.py --num {int(frequency_no)*2} {mobile_no} &")
+    os.system(f"nohup /usr/bin/python3 bomber.py --num {int(frequency_no)*2} --country {country_code} {mobile_no} &")
     messages.success(request, f"ATTACK STARTED AT {mobile_no}  WITH {frequency_no} SMS ")
     return redirect("/")

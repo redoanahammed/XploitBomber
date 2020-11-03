@@ -55,10 +55,12 @@
                 {% csrf_token %}
 
                 <div class="form-group">
+                    <input type="number" class="form-control" name="cc" autocomplete="on" placeholder="Country Code (without +)" required>
+                </div><div class="form-group">
                     <input type="text" class="form-control" name="mn" autocomplete="on" placeholder="Target Mobile Number" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="fq" placeholder="Number Of Sms" required>
+                    <input type="text" class="form-control" name="fq" placeholder="Number Of Sms" required>
                 </div>
 
                 <div class="form-group">

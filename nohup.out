@@ -1,0 +1,26 @@
+SMSBOMBER
+Target: 7466067516 | Threads: 15 | SMS-Bombs: 20
+Traceback (most recent call last):
+  File "bomber.py", line 149, in <module>
+    p = APIRequestsHandler(
+  File "/home/raman/Desktop/xploitbomber/utils.py", line 307, in __init__
+    self.client = httpx.Client(http2=True, proxies=self.proxy, verify=VERIFY)
+  File "/home/raman/.local/lib/python3.8/site-packages/httpx/_client.py", line 590, in __init__
+    raise ImportError(
+ImportError: Using http2=True, but the 'h2' package is not installed. Make sure to install httpx using `pip install httpx[http2]`.
+Exception ignored in: <function Client.__del__ at 0x7f9da461dc10>
+Traceback (most recent call last):
+  File "/home/raman/.local/lib/python3.8/site-packages/httpx/_client.py", line 1139, in __del__
+    self.close()
+  File "/home/raman/.local/lib/python3.8/site-packages/httpx/_client.py", line 1111, in close
+    self._transport.close()
+AttributeError: 'Client' object has no attribute '_transport'
+Usage: bomber.py [--config-path/-c] [--num/-N] [--country/-C] [--threads/-T]
+                 [--timeout/-t] [--proxy/-P] [--verbose/-v] [--verify/-V]
+                 [-h/--help] TARGET
+
+[ERROR] argument --country/-C: invalid int value: '{cc}'
+SMSBOMBER
+Target: 7466067516 | Threads: 15 | SMS-Bombs: 20
+Bombing : 1/20 | Success: 1 | Failed: 0Bombing : 2/20 | Success: 2 | Failed: 0Bombing : 3/20 | Success: 2 | Failed: 1Bombing : 4/20 | Success: 3 | Failed: 1Bombing : 5/20 | Success: 4 | Failed: 1Bombing : 6/20 | Success: 4 | Failed: 2Bombing : 7/20 | Success: 5 | Failed: 2Bombing : 8/20 | Success: 6 | Failed: 2Bombing : 9/20 | Success: 6 | Failed: 3Bombing : 10/20 | Success: 6 | Failed: 4Bombing : 11/20 | Success: 7 | Failed: 4Bombing : 12/20 | Success: 8 | Failed: 4Bombing : 13/20 | Success: 8 | Failed: 5Bombing : 14/20 | Success: 8 | Failed: 6Bombing : 15/20 | Success: 8 | Failed: 7Bombing : 16/20 | Success: 8 | Failed: 8Bombing : 17/20 | Success: 8 | Failed: 9Bombing : 18/20 | Success: 8 | Failed: 10Bombing : 19/20 | Success: 9 | Failed: 10Bombing : 20/20 | Success: 9 | Failed: 11
+Took 30.97s to complete
