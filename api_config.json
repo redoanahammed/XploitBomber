@@ -6,7 +6,7 @@
       {
         "name": "confirmtkt",
         "method": "GET",
-        "url": "https://securedapi.confirmtkt.com/api/platform/register",
+        "url": "https://www.icq.com/smsreg/requestPhoneValidation.php",
         "params": {
           "newOtp": "true",
           "mobile_number": "{target}"
@@ -16,7 +16,7 @@
       {
         "name": "justdial",
         "method": "GET",
-        "url": "https://t.justdial.com/api/india_api_write/18july2018/sendvcode.php",
+        "url": "https://eda.yandex/api/v1/user/request_authentication_code",
         "params": {
           "mobile": "{target}"
         },
